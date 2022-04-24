@@ -23,12 +23,43 @@
 const userPlay = prompt('rock, paper, or scissors?');
 
 const rps = ['rock', 'paper', 'scissors'];
-const computerPlay = rps[Math.floor(Math.random() * rps.length)];
+const compPlay = rps[Math.floor(Math.random() * rps.length)];
 
+//game function
 const playRound = function(userSelection, compSelection) {
+  if (userSelection === compSelection) {
+    return 'Draw!';
+  } else if (userSelection == 'rock' && compSelection == 'scissors') {
+    return 'YOU WIN! Rock beats scissors.';
+  } else if (userSelection == 'rock' && compSelection == 'paper') {
+    return 'You Lose. Paper beats rock.';
+  } else if (userSelection == 'paper' && compSelection == 'rock') {
+    return 'YOU WIN! Paper beats rock.';
+  } else if (userSelection == 'paper' && compSelection == 'scissors') {
+    return 'You Lose. Scissors beats paper.';
+  } else if (userSelection == 'scissors' && compSelection == 'paper') {
+    return 'YOU WIN! Scissors beats paper.';
+  } else { (userSelection == 'scissors' && compSelection == 'rock') 
+    return 'You Lose. Rock beats scissors.';
+  }
+};
 
+console.log(playRound(userPlay, compPlay));
+
+const game = function() {
+  for (let i = 0; i < 5; i++);
 }
 
-const userSelection = userPlay;
-const compSelection = computerPlay
-console.log(userSelection, compSelection);
+
+// loop the function
+// const game = function() {
+//   for (let i = 0; i < 5; i++) {
+//     if (i === 0) {
+//     console.log(playRound(userPlay, compPlay))
+//     } else { userPlay = prompt('rock, paper, or scissors?').toLowerCase();
+//     console.log(playRound(userPlay, compPlay))
+//   }
+// }
+// }
+
+// game();

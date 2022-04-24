@@ -20,7 +20,7 @@
 
 
 
-const userPlay = prompt('rock, paper, or scissors?');
+let userPlay = prompt('rock, paper, or scissors?');
 
 const rps = ['rock', 'paper', 'scissors'];
 const compPlay = rps[Math.floor(Math.random() * rps.length)];
@@ -44,11 +44,26 @@ const playRound = function(userSelection, compSelection) {
   }
 };
 
-console.log(playRound(userPlay, compPlay));
-
 const game = function() {
-  for (let i = 0; i < 5; i++);
-}
+  for (let i = 0; i < 5; i++) 
+    if (i === 0) {
+    console.log(playRound(userPlay, compPlay))
+    } else { const userPlay = prompt('rock, paper, or scissors?');
+    const compPlay = rps[Math.floor(Math.random() * rps.length)];
+    console.log(playRound(userPlay, compPlay))
+  }
+};
+
+game();
+
+// console.log(playRound(userPlay, compPlay));
+
+
+
+
+
+
+
 
 
 // loop the function
@@ -63,3 +78,11 @@ const game = function() {
 // }
 
 // game();
+
+// console.log(playRound(userPlay, compPlay));
+
+// for (let i = 0; i < 5; i++) {
+//   const userPlay = prompt('rock, paper, or scissors?');
+//   const compPlay = rps[Math.floor(Math.random() * rps.length)];
+//   console.log(playRound(userPlay, compPlay));
+// }

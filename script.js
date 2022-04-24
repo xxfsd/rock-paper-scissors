@@ -20,7 +20,7 @@
 
 
 
-let userPlay = prompt('rock, paper, or scissors?');
+let userPlay = prompt('rock, paper, or scissors?').toLowerCase();
 
 const rps = ['rock', 'paper', 'scissors'];
 const compPlay = rps[Math.floor(Math.random() * rps.length)];
@@ -48,7 +48,7 @@ const game = function() {
   for (let i = 0; i < 5; i++) 
     if (i === 0) {
     console.log(playRound(userPlay, compPlay))
-    } else { const userPlay = prompt('rock, paper, or scissors?');
+    } else { userPlay = prompt('rock, paper, or scissors?').toLowerCase();
     const compPlay = rps[Math.floor(Math.random() * rps.length)];
     console.log(playRound(userPlay, compPlay))
   }

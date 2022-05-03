@@ -1,3 +1,15 @@
+const rock = document.querySelector("Rock");
+const paper = document.querySelector("Paper");
+const scissors = document.querySelector("Scissors");
+
+
+
+
+
+
+
+
+
 const rps = ['rock', 'paper', 'scissors'];
 
 let userPlay = prompt('rock, paper, or scissors?').toLowerCase();
@@ -12,35 +24,35 @@ const playRound = function(userSelection, compSelection) {
   if (userSelection === compSelection) {
     return 'Draw!' + gameScore++;
   } else if (userSelection == 'rock' && compSelection == 'scissors') {
-    return 'YOU WIN! Rock beats scissors.' + userScore++;
+      return 'YOU WIN! Rock beats scissors.' + userScore++;
   } else if (userSelection == 'rock' && compSelection == 'paper') {
-    return 'You Lose. Paper beats rock.' + compScore++;
+      return 'You Lose. Paper beats rock.' + compScore++;
   } else if (userSelection == 'paper' && compSelection == 'rock') {
-    return 'YOU WIN! Paper beats rock.' + userScore++;
+      return 'YOU WIN! Paper beats rock.' + userScore++;
   } else if (userSelection == 'paper' && compSelection == 'scissors') {
-    return 'You Lose. Scissors beats paper.' + compScore++;
+      return 'You Lose. Scissors beats paper.' + compScore++;
   } else if (userSelection == 'scissors' && compSelection == 'paper') {
-    return 'YOU WIN! Scissors beats paper.' + userScore++;
+      return 'YOU WIN! Scissors beats paper.' + userScore++;
   } else { (userSelection == 'scissors' && compSelection == 'rock') 
-    return 'You Lose. Rock beats scissors.' + compScore++;
+      return 'You Lose. Rock beats scissors.' + compScore++;
   }
 };
 
 //loop function
-const game = function() {
-  for (let i = 0; i < 5; i++) 
-    if (i === 0) {
-    console.log(playRound(userPlay, compPlay))
-    } else { userPlay = prompt('rock, paper, or scissors?').toLowerCase();
-    const compPlay = rps[Math.floor(Math.random() * rps.length)];
-    console.log(playRound(userPlay, compPlay))
-    }
-    if (userScore >= 2) + console.log("You Win!");
-    else if (compScore >= 2) + console.log("You Lose.. Try Again?");
-    else (gameScore >= 2) + console.log('Draw!')
-};
+// const game = function() {
+//   for (let i = 0; i < 5; i++) 
+//     if (i === 0) {
+//     console.log(playRound(userPlay, compPlay))
+//     } else { userPlay = prompt('rock, paper, or scissors?').toLowerCase();
+//     const compPlay = rps[Math.floor(Math.random() * rps.length)];
+//     console.log(playRound(userPlay, compPlay))
+//     }
+//     if (userScore >= 2) + console.log("You Win!");
+//     else if (compScore >= 2) + console.log("You Lose.. Try Again?");
+//     else (gameScore >= 2) + console.log('Draw! Play again?');
+// };
 
-game();
+// game();
 
 
 

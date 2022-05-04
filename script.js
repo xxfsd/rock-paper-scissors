@@ -1,11 +1,6 @@
-const rock = document.querySelector("Rock");
-const paper = document.querySelector("Paper");
-const scissors = document.querySelector("Scissors");
-
-
-
-
-
+const rock = document.querySelector(".rock");
+const paper = document.querySelector(".paper");
+const scissors = document.querySelector(".scissors");
 
 
 

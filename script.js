@@ -2,12 +2,16 @@
 const rock = document.querySelector('.rock');
 const paper = document.querySelector('.paper');
 const scissors = document.querySelector('.scissors');
-const userScore = document.querySelector('.userScore');
-const compScore = document.querySelector('.compScore');
+const userScoreDisplay = document.querySelector('.userScore');
+const compScoreDisplay = document.querySelector('.compScore');
+const resultDisplay = document.querySelector('.result')
 
 //scores
-userScore.innerHTML = 0;
-compScore.innerHTML = 0;
+userScoreDisplay.innerHTML = 0;
+compScoreDisplay.innerHTML = 0;
+let gameScore = 0;
+let userScore = 0;
+let compScore = 0;
 
 //array
 let rps = ['rock', 'paper', 'scissors'];
@@ -25,17 +29,27 @@ scissors.addEventListener('click', () => playRound('scissors', compPlay()));
 //game function
 const playRound = function (userSelect, compSelect) {
   if (userSelect === compSelect) {
-    console.log('Draw! Play again?');
+    resultDisplay.innerHTML = 'Draw!', gameScore++
   } else if (rps[(rps.indexOf(compSelect) + 1) % rps.length] === userSelect) {
-    console.log('You win!') + userScore.innerHTML++;
-  } else { console.log('You lose.') + compScore.innerHTML++;
+    resultDisplay.innerHTML = 'You win!', userScore++, userScoreDisplay.innerHTML++;
+  } else { resultDisplay.innerHTML = 'You lose.', compScore++, compScoreDisplay.innerHTML++;
+  }
+  if (gameScore >= 5) {
+    userScoreDisplay.innerHTML = '',
+    compScoreDisplay.innerHTML = '',
+    resultDisplay.innerHTML = 'DRAW! Play Again?'
+  }
+  else if (userScore >= 5) {
+    userScoreDisplay.innerHTML = '',
+    compScoreDisplay.innerHTML = '',
+    resultDisplay.innerHTML = 'You WIN! Play Again?'
+  }
+  else if (compScore >= 5) {
+    userScoreDisplay.innerHTML = '',
+    compScoreDisplay.innerHTML = '',
+    resultDisplay.innerHTML = 'You LOSE.. Try Again?'
   }
 };
-
-
-
-
-
 
 
 

@@ -35,19 +35,28 @@ const playRound = function (userSelect, compSelect) {
   } else { resultDisplay.innerHTML = 'You lose.', compScore++, compScoreDisplay.innerHTML++;
   }
   if (gameScore >= 5) {
-    userScoreDisplay.innerHTML = '',
+    document.querySelector('.rock').disabled = true;
+    document.querySelector('.paper').disabled = true;
+    document.querySelector('.scissors').disabled = true;
+    return userScoreDisplay.innerHTML = '',
     compScoreDisplay.innerHTML = '',
-    resultDisplay.innerHTML = 'DRAW! Play Again?'
+    resultDisplay.innerHTML = 'Game Over! It\'s a Tie!';
   }
   else if (userScore >= 5) {
-    userScoreDisplay.innerHTML = '',
+    document.querySelector('.rock').disabled = true;
+    document.querySelector('.paper').disabled = true;
+    document.querySelector('.scissors').disabled = true;
+    return userScoreDisplay.innerHTML = '',
     compScoreDisplay.innerHTML = '',
-    resultDisplay.innerHTML = 'You WIN! Play Again?'
+    resultDisplay.innerHTML = 'GAME OVER! You WIN!';
   }
   else if (compScore >= 5) {
-    userScoreDisplay.innerHTML = '',
+    document.querySelector('.rock').disabled = true;
+    document.querySelector('.paper').disabled = true;
+    document.querySelector('.scissors').disabled = true;
+    return userScoreDisplay.innerHTML = '',
     compScoreDisplay.innerHTML = '',
-    resultDisplay.innerHTML = 'You LOSE.. Try Again?'
+    resultDisplay.innerHTML = 'GAME OVER! You Lost..';
   }
 };
 

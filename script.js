@@ -63,9 +63,7 @@ const playRound = function (userSelect, compSelect) {
 
 
 
-
-
-
+//OLD CODE I CREATED WHILE LEARNING
 
 //game function
 // const playRound = function(userPlay, compPlay) {
@@ -102,9 +100,6 @@ const playRound = function (userSelect, compSelect) {
 
 // game();
 
-
-
-
 //UBER SOLUTION
 // const choices = ['rock', 'paper', 'scissors'];
 // const message = choices.map((choice, index) => `${index + 1} - ${choice}`).join('\n');
@@ -117,8 +112,6 @@ const playRound = function (userSelect, compSelect) {
 //     else if ((comp + 1) % choices.length === user) alert('You win!');
 //     else alert('You lose.');
 // }
-
-
 
 //unused code while learning
 
